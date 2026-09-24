@@ -31,13 +31,19 @@ python -m http.server 5500
 
 ## Đưa lên GitHub Pages
 
-Xem hướng dẫn trong file này hoặc làm theo các bước:
+Repo đã có sẵn quy trình tự động tại `.github/workflows/deploy-pages.yml`.
+Chỉ cần làm **một lần duy nhất**:
 
-1. Đưa toàn bộ mã nguồn lên repository trên GitHub (nhánh `main`).
-2. Vào **Settings → Pages**.
-3. **Source** chọn `Deploy from a branch`, **Branch** chọn `main` và thư mục `/ (root)`.
-4. Bấm **Save**, chờ ~1 phút.
-5. Trang sẽ chạy tại `https://<tên-tài-khoản>.github.io/<tên-repo>/test6/test6.html`.
+1. Vào **Settings → Pages** của repo.
+2. Ở mục **Build and deployment → Source**, chọn **GitHub Actions**.
+3. Chờ workflow _Deploy static site to GitHub Pages_ chạy xong (tab **Actions**).
+
+Sau đó, mỗi lần bạn `git push` lên nhánh `main`, trang sẽ tự động được cập nhật.
+
+Địa chỉ truy cập:
+
+- Trang chính: `https://<tên-tài-khoản>.github.io/<tên-repo>/test6/test6.html`
+- Thư mục gốc: `https://<tên-tài-khoản>.github.io/<tên-repo>/` (chuyển tiếp về trang chính)
 
 ## Giấy phép & nguồn tư liệu
 
