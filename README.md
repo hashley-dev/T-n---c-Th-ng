@@ -38,6 +38,9 @@ Chỉ cần làm **một lần duy nhất**:
 2. Ở mục **Build and deployment → Source**, chọn **GitHub Actions**.
 3. Chờ workflow _Deploy static site to GitHub Pages_ chạy xong (tab **Actions**).
 
+> Có thể bật bằng dòng lệnh: chạy `scripts/enable-pages.ps1` (cần Personal Access
+> Token có quyền `Pages: Read and write`). Script không ghi token xuống đĩa.
+
 Sau đó, mỗi lần bạn `git push` lên nhánh `main`, trang sẽ tự động được cập nhật.
 
 Địa chỉ truy cập:
