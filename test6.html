@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tôn Đức Thắng – Người Thợ Máy Trở Thành Chủ Tịch Nước</title>
+
+    <!-- ================= GOOGLE FONTS ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="test6.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+     MÀN HÌNH LOADING (hiện khi trang vừa mở, JS sẽ ẩn đi)
+============================================================ -->
+    <div id="loading-screen">
+      <div class="loading-emblem">TĐT</div>
+      <div class="loading-bar"><span></span></div>
+      <p class="loading-text">Đang mở cánh cửa lịch sử...</p>
+    </div>
+
+    <!-- ============================================================
+     HEADER + NAVIGATION
+============================================================ -->
+    <header id="header">
+      <nav class="navbar">
+        <!-- Logo trường (gắn ở góc trên bên trái, có thể bấm) -->
+        <a
+          href="#hero"
+          class="logo-mark"
+          aria-label="Đại học Tôn Đức Thắng — về đầu trang"
+        >
+          <img
+            src="https://tdtu.edu.vn/sites/www/files/logo_2.png"
+            alt="Logo Đại học Tôn Đức Thắng (TDT)"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <a href="#hero" class="logo">Tôn Đức <span>Thắng</span></a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li><a href="#timeline" class="nav-link">Cuộc đời</a></li>
+          <li><a href="#hanh-trinh" class="nav-link">Hành trình</a></li>
+          <li><a href="#su-kien" class="nav-link">Sự kiện</a></li>
+          <li><a href="#thu-vien" class="nav-link">Thư viện</a></li>
+          <li><a href="#video" class="nav-link">Thước phim</a></li>
+          <li><a href="#di-san" class="nav-link">Di sản</a></li>
+        </ul>
+
+        <!-- Nút hamburger cho mobile -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Mở menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+      <section id="hero" class="hero">
+        <!-- Ảnh nền hero: JS gắn ảnh SVG tự tạo; muốn dùng ảnh thật, sửa trong test6.js -->
+        <div class="hero-bg"></div>
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">Chủ tịch nước · 20/8/1888 – 30/3/1980</p>
+          <h1 class="hero-title reveal-text">TÔN ĐỨC THẮNG</h1>
+          <p class="hero-subtitle">
+            Người thợ máy Ba Son trở thành chiến sĩ cách mạng, trải qua 15 năm
+            tù Côn Đảo và trở thành Chủ tịch nước
+          </p>
+          <div class="hero-buttons">
+            <a href="#timeline" class="btn btn-primary">Khám phá cuộc đời</a>
+            <a href="#hanh-trinh" class="btn btn-outline"
+              >Theo bước hành trình</a
+            >
+          </div>
+        </div>
+
+        <a href="#gioi-thieu" class="scroll-down" aria-label="Cuộn xuống">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ============================================================
+       SECTION 2 — GIỚI THIỆU
+  ============================================================ -->
+      <section id="gioi-thieu" class="section intro-section">
+        <div class="container intro-grid">
+          <div class="intro-text reveal-on-scroll">
+            <p class="section-label">Giới thiệu</p>
+            <h2 class="section-title">
+              Tôn Đức Thắng — Từ Người Thợ Máy Đến Chủ Tịch Nước
+            </h2>
+
+            <p>
+              Tôn Đức Thắng (20/8/1888 – 30/3/1980) sinh ra tại Cù lao Ông Hổ,
+              làng An Hòa, tổng Định Thành, tỉnh Long Xuyên (nay là xã Mỹ Hòa
+              Hưng, thành phố Long Xuyên, tỉnh An Giang), trong một gia đình
+              nông dân. Ông là một trong những nhà lãnh đạo cách mạng xuất thân
+              từ giai cấp công nhân hiếm hoi ở Việt Nam đầu thế kỷ XX.
+            </p>
+
+            <p>
+              Rời quê lên Sài Gòn, ông học nghề và làm thợ máy tại xưởng đóng
+              tàu Ba Son. Trong Chiến tranh thế giới thứ nhất, ông bị động viên
+              sang Pháp làm việc trong binh xưởng hải quân ở Toulon, nơi ông
+              tiếp xúc với phong trào công nhân Pháp. Sau khi trở về nước năm
+              1920, ông cùng những người thợ ở Sài Gòn – Chợ Lớn tham gia và tổ
+              chức phong trào công nhân.
+            </p>
+
+            <p>
+              Ông là một trong những người sáng lập Công hội Đỏ ở Sài Gòn — tổ
+              chức công đoàn đầu tiên do người Việt lập ra — vào khoảng năm
+              1920. Do hoạt động cách mạng, ông nhiều lần bị thực dân Pháp bắt
+              giam, và từ năm 1930 bị đày ra Côn Đảo, chịu án tù khổ sai suốt 15
+              năm cho đến khi Cách mạng Tháng Tám năm 1945 thành công.
+            </p>
+
+            <p>
+              Sau khi ra tù, ông tiếp tục tham gia lãnh đạo cách mạng, giữ nhiều
+              trọng trách trong Mặt trận và Nhà nước: Chủ tịch Tổng Liên đoàn
+              Lao động Việt Nam, Chủ tịch Ủy ban Trung ương Mặt trận Tổ quốc
+              Việt Nam, Phó Chủ tịch nước. Sau khi Chủ tịch Hồ Chí Minh qua đời
+              năm 1969, ông được bầu làm Chủ tịch nước Việt Nam Dân chủ Cộng
+              hòa, sau đó là Chủ tịch nước Cộng hòa Xã hội chủ nghĩa Việt Nam từ
+              năm 1976 cho đến khi mất năm 1980.
+            </p>
+
+            <p>
+              Trang web này tập hợp thông tin, hình ảnh và video về thân thế, sự
+              nghiệp, hành trình hoạt động cách mạng, các sự kiện và di sản mà
+              Tôn Đức Thắng để lại — như một phòng tư liệu nhỏ để mỗi người xem
+              hiểu thêm về người mà tên tuổi gắn liền với Trường Đại học Tôn Đức
+              Thắng ngày nay.
+            </p>
+          </div>
+
+          <div class="intro-image reveal-on-scroll">
+            <!-- THAY ẢNH TẠI ĐÂY: chép ảnh vào thư mục images/ với tên ton-duc-thang.jpg
+                 (ví dụ ảnh chân dung Chủ tịch Tôn Đức Thắng, kiểm tra kỹ nguồn và giấy phép sử dụng).
+                 Nếu thiếu file, JS sẽ tự thay bằng ảnh SVG dự phòng. -->
+            <figure class="intro-figure">
+              <img
+                id="intro-portrait"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9YRoZZpqPsPNSE4HFY20z45-xSFvbmM43ORtLDQzPtg&s=10"
+                alt="Chân dung Chủ tịch Tôn Đức Thắng"
+                loading="lazy"
+              />
+              <figcaption class="intro-caption">
+                Chủ tịch Tôn Đức Thắng
+              </figcaption>
+            </figure>
+            <div class="intro-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-target="15">0</span>
+                <p>năm tù khổ sai ở Côn Đảo (1930 – 1945)</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="1969">0</span>
+                <p>trở thành Chủ tịch nước</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="91">0</span>
+                <p>tuổi (1888 – 1980)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 4 — TIMELINE
+  ============================================================ -->
+      <section id="timeline" class="section timeline-section">
+        <div class="container">
+          <p class="section-label center">Dòng chảy thời gian</p>
+          <h2 class="section-title center">
+            Cuộc Đời Tôn Đức Thắng Qua Các Mốc Thời Gian
+          </h2>
+          <p class="section-desc center">
+            Nhấn vào từng mốc để xem chi tiết bối cảnh và ý nghĩa lịch sử.
+          </p>
+        </div>
+
+        <div class="timeline-wrap" id="timeline-wrap">
+          <!-- Các mốc thời gian được tạo tự động bởi JS -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 5 — HÀNH TRÌNH TỪ THỢ MÁY ĐẾN CHỦ TỊCH NƯỚC
+  ============================================================ -->
+      <section id="hanh-trinh" class="section march-section">
+        <div class="container">
+          <p class="section-label center">Hành trình cách mạng</p>
+          <h2 class="section-title center">
+            Từ Người Thợ Máy Ba Son Đến Chủ Tịch Nước
+          </h2>
+          <p class="section-desc center">
+            Từ Cù lao Ông Hổ đến Côn Đảo rồi Hà Nội: chặng đường hơn nửa thế kỷ
+            gắn với phong trào công nhân và sự nghiệp cách mạng Việt Nam.
+          </p>
+
+          <div class="march-track" id="march-track">
+            <!-- Các chặng hành trình được tạo tự động bởi JS (marchData) -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 6 — SỰ KIỆN
+  ============================================================ -->
+      <section id="su-kien" class="section events-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu lịch sử</p>
+          <h2 class="section-title center">Những Sự Kiện Gắn Với Tên Người</h2>
+          <p class="section-desc center">
+            Từ những năm ở xưởng Ba Son đến 15 năm tù Côn Đảo và ngày trở thành
+            Chủ tịch nước: những trang sử gắn liền với cuộc đời Tôn Đức Thắng.
+          </p>
+
+          <div class="events-list" id="events-list">
+            <!-- Danh sách sự kiện được tạo tự động bởi JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 7 — THƯ VIỆN HÌNH ẢNH
+  ============================================================ -->
+      <section id="thu-vien" class="section gallery-section">
+        <div class="container">
+          <p class="section-label center">Thư viện</p>
+          <h2 class="section-title center">Thư Viện Hình Ảnh</h2>
+          <p class="section-desc center">
+            Tư liệu hình ảnh về Chủ tịch Tôn Đức Thắng và những địa danh gắn với
+            cuộc đời hoạt động cách mạng của Người. Nhấn vào ảnh để xem ở chế độ
+            toàn màn hình.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Ảnh thư viện được tạo tự động bởi JS, xem mảng galleryData -->
+        </div>
+      </section>
+
+      <!-- Lightbox xem ảnh phóng to -->
+      <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Xem ảnh phóng to"
+      >
+        <button
+          class="lightbox-close"
+          id="lightbox-close"
+          aria-label="Đóng ảnh"
+        >
+          &times;
+        </button>
+        <button
+          class="lightbox-nav lightbox-prev"
+          id="lightbox-prev"
+          aria-label="Ảnh trước"
+        >
+          &#10094;
+        </button>
+        <img src="" alt="" id="lightbox-img" />
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <button
+          class="lightbox-nav lightbox-next"
+          id="lightbox-next"
+          aria-label="Ảnh sau"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <!-- ============================================================
+       SECTION 8 — VIDEO
+  ============================================================ -->
+      <section id="video" class="section video-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu phim</p>
+          <h2 class="section-title center">
+            Tôn Đức Thắng Qua Những Thước Phim
+          </h2>
+          <p class="section-desc center">
+            Những thước phim tài liệu giúp hình dung rõ nét hơn về cuộc đời và
+            sự nghiệp cách mạng của Người.
+          </p>
+
+          <div class="video-grid">
+            <!--
+              CÁCH GẮN VIDEO CỤ THỂ:
+              Thay thẻ <a class="video-frame video-link" ...> bằng iframe dưới đây
+              và điền VIDEO_ID thật (phần sau "watch?v=" trên YouTube):
+
+              <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="..." allowfullscreen></iframe>
+              </div>
+            -->
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Ch%E1%BB%A7+t%E1%BB%8Bch+T%C3%B4n+%C4%90%E1%BB%A9c+Th%E1%BA%AFng+phim+t%C3%A0i+li%E1%BB%87u+cu%E1%BB%99c+%C4%91%E1%BB%9Di"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Chủ tịch|Tôn Đức Thắng"
+                data-art-sub="1888 – 1980"
+                data-art-hue="red"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Chủ tịch Tôn Đức Thắng — cuộc đời và sự nghiệp</h3>
+                <p>
+                  Phim tài liệu tổng quan về cuộc đời hoạt động cách mạng của
+                  Tôn Đức Thắng, từ Cù lao Ông Hổ đến Phủ Chủ tịch.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Nh%C3%A0+t%C3%B9+C%C3%B4n+%C4%90%E1%BA%A3o+l%E1%BB%8Bch+s%E1%BB%AD+phim+t%C3%A0i+li%E1%BB%87u"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Nhà tù|Côn Đảo"
+                data-art-sub="1930 - 1945"
+                data-art-hue="jade"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Nhà tù Côn Đảo trong lịch sử</h3>
+                <p>
+                  Tư liệu về "địa ngục trần gian" Côn Đảo, nơi giam giữ nhiều
+                  chiến sĩ cách mạng, trong đó có Tôn Đức Thắng suốt 15 năm.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=X%C6%B0%E1%BB%9Fng+Ba+Son+S%C3%A0i+G%C3%B2n+l%E1%BB%8Bch+s%E1%BB%AD+phim+t%C3%A0i+li%E1%BB%87u"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Xưởng|Ba Son"
+                data-art-sub="Sài Gòn"
+                data-art-hue="gold"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Xưởng Ba Son — nơi khởi đầu con đường cách mạng</h3>
+                <p>
+                  Tư liệu về xưởng đóng tàu Ba Son ở Sài Gòn, nơi Tôn Đức Thắng
+                  học nghề thợ máy và phong trào công nhân Sài Gòn hình thành.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 9 — Ý NGHĨA / DI SẢN
+  ============================================================ -->
+      <section id="di-san" class="section legacy-section">
+        <div class="container">
+          <p class="section-label center">Ý nghĩa lịch sử</p>
+          <h2 class="section-title center">Tôn Đức Thắng Để Lại Điều Gì?</h2>
+
+          <div class="legacy-grid">
+            <div class="legacy-text reveal-on-scroll">
+              <p>
+                Điều đặc biệt trong cuộc đời Tôn Đức Thắng là ông xuất thân từ
+                chính giai cấp công nhân mà cách mạng Việt Nam hướng tới: một
+                người thợ máy học nghề ở xưởng Ba Son, từng làm việc trong binh
+                xưởng hải quân Pháp, rồi trở thành một trong những người tổ chức
+                phong trào công nhân Sài Gòn – Chợ Lớn từ rất sớm. Ông là hiện
+                thân sống động cho mối liên hệ giữa phong trào công nhân và cách
+                mạng giải phóng dân tộc.
+              </p>
+
+              <p>
+                15 năm bị đày ải ở Côn Đảo (1930 – 1945) — nơi được mệnh danh là
+                "địa ngục trần gian" của chế độ thực dân — là quãng thời gian
+                dài nhất và khắc nghiệt nhất trong cuộc đời hoạt động cách mạng
+                của ông. Trong tù, ông vẫn giữ vững tinh thần, tham gia tổ chức
+                và lãnh đạo anh em tù chính trị, được nhiều bạn tù kính trọng.
+              </p>
+
+              <p>
+                Sau khi ra tù năm 1945, ông tiếp tục gánh vác nhiều trọng trách:
+                Chủ tịch Tổng Liên đoàn Lao động Việt Nam, Chủ tịch Ủy ban Trung
+                ương Mặt trận Tổ quốc Việt Nam, Phó Chủ tịch nước. Sau khi Chủ
+                tịch Hồ Chí Minh qua đời năm 1969, ông được Quốc hội bầu làm Chủ
+                tịch nước — người kế nhiệm trực tiếp vị trí đứng đầu Nhà nước.
+              </p>
+
+              <p>
+                Là Chủ tịch nước trong giai đoạn 1969 – 1980, ông chứng kiến
+                những thời điểm quan trọng bậc nhất của lịch sử dân tộc: kết
+                thúc cuộc kháng chiến chống Mỹ với Đại thắng mùa Xuân năm 1975,
+                và việc thống nhất đất nước, thành lập nước Cộng hòa Xã hội chủ
+                nghĩa Việt Nam năm 1976. Ông giữ cương vị Chủ tịch nước cho đến
+                khi qua đời ngày 30/3/1980 tại Hà Nội.
+              </p>
+
+              <p>
+                Cuộc đời Tôn Đức Thắng gắn liền với tinh thần đoàn kết dân tộc,
+                đoàn kết giữa các giai cấp và các miền đất nước — điều được thể
+                hiện rõ qua nhiều năm ông đứng đầu Mặt trận Tổ quốc Việt Nam.
+                Xuất thân từ Nam Bộ, ông là biểu tượng cho sự gắn bó giữa phong
+                trào cách mạng ở miền Nam với sự nghiệp chung của cả dân tộc.
+              </p>
+
+              <p>
+                Ngày nay, tên ông được đặt cho nhiều đường phố, trường học trên
+                cả nước, trong đó có Trường Đại học Tôn Đức Thắng — nơi tiếp nối
+                tinh thần hiếu học và ý chí vươn lên mà cuộc đời ông là một minh
+                chứng, từ một người thợ máy học nghề trở thành người đứng đầu
+                Nhà nước.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 10 — TRÍCH DẪN LỊCH SỬ
+  ============================================================ -->
+      <section class="quote-section" id="quote-section">
+        <div class="quote-bg"></div>
+        <div class="quote-overlay"></div>
+
+        <div class="quote-content" id="quote-content">
+          <!-- Nội dung trích dẫn được luân phiên hiển thị bởi JS, dữ liệu trong quotesData -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+      <button id="back-to-top" aria-label="Lên đầu trang">&uarr;</button>
+    </main>
+
+    <!-- ============================================================
+     FOOTER
+============================================================ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-logo">Tôn Đức <span>Thắng</span></h3>
+          <p>
+            Không gian tư liệu số giới thiệu về Chủ tịch Tôn Đức Thắng — thân
+            thế, sự nghiệp, hành trình hoạt động cách mạng, các sự kiện và di
+            sản Người để lại cho lịch sử Việt Nam.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#gioi-thieu">Giới thiệu</a></li>
+            <li><a href="#timeline">Cuộc đời Tôn Đức Thắng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Nội dung</h4>
+          <ul>
+            <li><a href="#hanh-trinh">Hành trình cách mạng</a></li>
+            <li><a href="#su-kien">Sự kiện lịch sử</a></li>
+            <li><a href="#thu-vien">Thư viện hình ảnh</a></li>
+            <li><a href="#video">Thước phim tài liệu</a></li>
+            <li><a href="#di-san">Di sản Tôn Đức Thắng</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year"></span> Tôn Đức Thắng — Tư liệu lịch
+          sử. Trang web được xây dựng với mục đích giáo dục và học tập.
+        </p>
+        <p class="footer-quote">"Đoàn kết, đoàn kết, đại đoàn kết."</p>
+      </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="test6.js" defer></script>
+  </body>
+</html>
