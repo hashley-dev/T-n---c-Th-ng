@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đại Tướng Võ Nguyên Giáp – Từ Thầy Giáo Đến Tổng Tư Lệnh</title>
+
+    <!-- ================= GOOGLE FONTS ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="test7.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+     MÀN HÌNH LOADING (hiện khi trang vừa mở, JS sẽ ẩn đi)
+============================================================ -->
+    <div id="loading-screen">
+      <div class="loading-emblem">VNG</div>
+      <div class="loading-bar"><span></span></div>
+      <p class="loading-text">Đang mở cánh cửa lịch sử...</p>
+    </div>
+
+    <!-- ============================================================
+     HEADER + NAVIGATION
+============================================================ -->
+    <header id="header">
+      <nav class="navbar">
+        <!-- Logo trường (gắn ở góc trên bên trái, có thể bấm) -->
+        <a
+          href="#hero"
+          class="logo-mark"
+          aria-label="Đại học Tôn Đức Thắng — về đầu trang"
+        >
+          <img
+            src="https://tdtu.edu.vn/sites/www/files/logo_2.png"
+            alt="Logo Đại học Tôn Đức Thắng (TDT)"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <a href="#hero" class="logo">Võ Nguyên <span>Giáp</span></a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li><a href="#timeline" class="nav-link">Cuộc đời</a></li>
+          <li><a href="#hanh-trinh" class="nav-link">Hành trình</a></li>
+          <li><a href="#su-kien" class="nav-link">Chiến dịch</a></li>
+          <li><a href="#thu-vien" class="nav-link">Thư viện</a></li>
+          <li><a href="#video" class="nav-link">Thước phim</a></li>
+          <li><a href="#di-san" class="nav-link">Di sản</a></li>
+        </ul>
+
+        <!-- Nút hamburger cho mobile -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Mở menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+      <section id="hero" class="hero">
+        <!-- Ảnh nền hero: JS gắn ảnh SVG tự tạo; muốn dùng ảnh thật, sửa trong test6.js -->
+        <div class="hero-bg"></div>
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">Đại tướng đầu tiên · 25/8/1911 – 4/10/2013</p>
+          <h1 class="hero-title reveal-text">VÕ NGUYÊN GIÁP</h1>
+          <p class="hero-subtitle">
+            Người thầy giáo dạy Sử trở thành Đại tướng, Tổng Tư lệnh chiến dịch
+            Điện Biên Phủ và Chiến dịch Hồ Chí Minh
+          </p>
+          <div class="hero-buttons">
+            <a href="#timeline" class="btn btn-primary">Khám phá cuộc đời</a>
+            <a href="#su-kien" class="btn btn-outline">Xem các chiến dịch</a>
+          </div>
+        </div>
+
+        <a href="#gioi-thieu" class="scroll-down" aria-label="Cuộn xuống">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ============================================================
+       SECTION 2 — GIỚI THIỆU
+  ============================================================ -->
+      <section id="gioi-thieu" class="section intro-section">
+        <div class="container intro-grid">
+          <div class="intro-text reveal-on-scroll">
+            <p class="section-label">Giới thiệu</p>
+            <h2 class="section-title">
+              Võ Nguyên Giáp — Từ Thầy Giáo Đến Đại Tướng
+            </h2>
+
+            <p>
+              Võ Nguyên Giáp (25/8/1911 – 4/10/2013) sinh ra tại làng An Xá, xã
+              Lộc Thủy, huyện Lệ Thủy, tỉnh Quảng Bình. Trước khi trở thành nhà
+              quân sự, ông từng học tại Trường Quốc học Huế, dạy học môn Lịch sử
+              tại Trường tư thục Thăng Long (Hà Nội) và viết báo, hoạt động
+              trong phong trào yêu nước những năm 1930.
+            </p>
+
+            <p>
+              Năm 1940, ông sang Trung Quốc và gặp Nguyễn Ái Quốc (Hồ Chí Minh),
+              bắt đầu con đường hoạt động cách mạng chuyên nghiệp. Ngày
+              22/12/1944, theo chỉ thị của Hồ Chí Minh, ông thành lập Đội Việt
+              Nam Tuyên truyền Giải phóng quân tại khu rừng Trần Hưng Đạo (Cao
+              Bằng) với 34 chiến sĩ đầu tiên — tiền thân của Quân đội Nhân dân
+              Việt Nam ngày nay.
+            </p>
+
+            <p>
+              Năm 1948, ở tuổi 37, ông được phong quân hàm Đại tướng — Đại tướng
+              đầu tiên và trẻ tuổi nhất của Quân đội Nhân dân Việt Nam. Ông giữ
+              chức Bộ trưởng Bộ Quốc phòng và Tổng Tư lệnh Quân đội nhân dân
+              Việt Nam trong nhiều thập kỷ.
+            </p>
+
+            <p>
+              Ông là Tổng Tư lệnh chiến dịch Điện Biên Phủ năm 1954, với quyết
+              định chuyển từ phương châm "đánh nhanh, thắng nhanh" sang "đánh
+              chắc, tiến chắc" — một quyết định mang tính bước ngoặt, dẫn đến
+              chiến thắng buộc thực dân Pháp phải ký Hiệp định Genève. Sau đó,
+              ông tiếp tục là một trong những người chỉ đạo chiến lược quan
+              trọng nhất của cuộc kháng chiến chống Mỹ, trong đó có cuộc Tổng
+              tiến công và nổi dậy Tết Mậu Thân 1968 và Chiến dịch Hồ Chí Minh
+              năm 1975.
+            </p>
+
+            <p>
+              Trang web này tập hợp thông tin, hình ảnh và video về thân thế, sự
+              nghiệp, hành trình từ một thầy giáo trở thành Đại tướng, các chiến
+              dịch và di sản mà Võ Nguyên Giáp để lại cho lịch sử Việt Nam — như
+              một phòng tư liệu nhỏ để mỗi người xem hiểu thêm về vị tướng được
+              nhiều người gọi là "vị tướng của nhân dân".
+            </p>
+          </div>
+
+          <div class="intro-image reveal-on-scroll">
+            <!-- THAY ẢNH TẠI ĐÂY: chép ảnh vào thư mục images/ với tên vo-nguyen-giap.jpg
+                 nếu muốn dùng bản sao lưu cục bộ thay vì ảnh Wikimedia Commons bên dưới.
+                 Nếu ảnh lỗi, JS sẽ tự thay bằng ảnh SVG dự phòng. -->
+            <figure class="intro-figure">
+              <img
+                id="intro-portrait"
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Mr._Vo_Nguyen_Giap.jpg"
+                alt="Chân dung Đại tướng Võ Nguyên Giáp"
+                loading="lazy"
+              />
+              <figcaption class="intro-caption">
+                Đại tướng Võ Nguyên Giáp — Ảnh: Wikimedia Commons
+              </figcaption>
+            </figure>
+            <div class="intro-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-target="34">0</span>
+                <p>chiến sĩ đầu tiên của quân đội, ngày 22/12/1944</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="1954">0</span>
+                <p>Tổng Tư lệnh chiến dịch Điện Biên Phủ</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="102">0</span>
+                <p>tuổi (1911 – 2013)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 3 — TIMELINE
+  ============================================================ -->
+      <section id="timeline" class="section timeline-section">
+        <div class="container">
+          <p class="section-label center">Dòng chảy thời gian</p>
+          <h2 class="section-title center">
+            Cuộc Đời Võ Nguyên Giáp Qua Các Mốc Thời Gian
+          </h2>
+          <p class="section-desc center">
+            Nhấn vào từng mốc để xem chi tiết bối cảnh và ý nghĩa lịch sử.
+          </p>
+        </div>
+
+        <div class="timeline-wrap" id="timeline-wrap">
+          <!-- Các mốc thời gian được tạo tự động bởi JS -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 4 — HÀNH TRÌNH TỪ THẦY GIÁO ĐẾN ĐẠI TƯỚNG
+  ============================================================ -->
+      <section id="hanh-trinh" class="section march-section">
+        <div class="container">
+          <p class="section-label center">Hành trình binh nghiệp</p>
+          <h2 class="section-title center">
+            Từ Bục Giảng Đến Chiến Trường Điện Biên Phủ
+          </h2>
+          <p class="section-desc center">
+            Từ quê nhà Quảng Bình đến bục giảng Hà Nội, rồi Cao Bằng và Điện
+            Biên Phủ: chặng đường đưa một thầy giáo dạy Sử trở thành Đại tướng.
+          </p>
+
+          <div class="march-track" id="march-track">
+            <!-- Các chặng hành trình được tạo tự động bởi JS (marchData) -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 5 — CÁC CHIẾN DỊCH
+  ============================================================ -->
+      <section id="su-kien" class="section events-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu lịch sử</p>
+          <h2 class="section-title center">Những Chiến Dịch Gắn Với Tên Ông</h2>
+          <p class="section-desc center">
+            Từ ngày thành lập quân đội đến Điện Biên Phủ, Tết Mậu Thân và Chiến
+            dịch Hồ Chí Minh: những trang sử quân sự gắn liền với Võ Nguyên
+            Giáp.
+          </p>
+
+          <div class="events-list" id="events-list">
+            <!-- Danh sách sự kiện được tạo tự động bởi JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 6 — THƯ VIỆN HÌNH ẢNH
+  ============================================================ -->
+      <section id="thu-vien" class="section gallery-section">
+        <div class="container">
+          <p class="section-label center">Thư viện</p>
+          <h2 class="section-title center">Thư Viện Hình Ảnh</h2>
+          <p class="section-desc center">
+            Tư liệu hình ảnh về Đại tướng Võ Nguyên Giáp và những địa danh gắn
+            với cuộc đời hoạt động cách mạng, quân sự của ông. Nhấn vào ảnh để
+            xem ở chế độ toàn màn hình.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Ảnh thư viện được tạo tự động bởi JS, xem mảng galleryData -->
+        </div>
+      </section>
+
+      <!-- Lightbox xem ảnh phóng to -->
+      <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Xem ảnh phóng to"
+      >
+        <button
+          class="lightbox-close"
+          id="lightbox-close"
+          aria-label="Đóng ảnh"
+        >
+          &times;
+        </button>
+        <button
+          class="lightbox-nav lightbox-prev"
+          id="lightbox-prev"
+          aria-label="Ảnh trước"
+        >
+          &#10094;
+        </button>
+        <img src="" alt="" id="lightbox-img" />
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <button
+          class="lightbox-nav lightbox-next"
+          id="lightbox-next"
+          aria-label="Ảnh sau"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <!-- ============================================================
+       SECTION 7 — VIDEO
+  ============================================================ -->
+      <section id="video" class="section video-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu phim</p>
+          <h2 class="section-title center">
+            Võ Nguyên Giáp Qua Những Thước Phim
+          </h2>
+          <p class="section-desc center">
+            Những thước phim tài liệu giúp hình dung rõ nét hơn về cuộc đời và
+            sự nghiệp của vị Đại tướng.
+          </p>
+
+          <div class="video-grid">
+            <!--
+              CÁCH GẮN VIDEO CỤ THỂ:
+              Thay thẻ <a class="video-frame video-link" ...> bằng iframe dưới đây
+              và điền VIDEO_ID thật (phần sau "watch?v=" trên YouTube):
+
+              <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="..." allowfullscreen></iframe>
+              </div>
+            -->
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=%C4%90%E1%BA%A1i+t%C6%B0%E1%BB%9Bng+V%C3%B5+Nguy%C3%AAn+Gi%C3%A1p+phim+t%C3%A0i+li%E1%BB%87u+cu%E1%BB%99c+%C4%91%E1%BB%9Di"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Đại tướng|Võ Nguyên Giáp"
+                data-art-sub="1911 – 2013"
+                data-art-hue="red"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Đại tướng Võ Nguyên Giáp — cuộc đời và sự nghiệp</h3>
+                <p>
+                  Phim tài liệu tổng quan về cuộc đời của Võ Nguyên Giáp, từ
+                  thầy giáo dạy Sử đến Tổng Tư lệnh Quân đội nhân dân Việt Nam.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Chi%E1%BA%BFn+d%E1%BB%8Bch+%C4%90i%E1%BB%87n+Bi%C3%AAn+Ph%E1%BB%A7+1954+phim+t%C3%A0i+li%E1%BB%87u"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Điện Biên|Phủ"
+                data-art-sub="1954"
+                data-art-hue="gold"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Chiến dịch Điện Biên Phủ năm 1954</h3>
+                <p>
+                  Tư liệu về "56 ngày đêm khoét núi, ngủ hầm" và quyết định
+                  chuyển phương châm tác chiến mang tính bước ngoặt của tướng
+                  Giáp.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Chi%E1%BA%BFn+d%E1%BB%8Bch+H%E1%BB%93+Ch%C3%AD+Minh+1975+phim+t%C3%A0i+li%E1%BB%87u"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Chiến dịch|Hồ Chí Minh"
+                data-art-sub="1975"
+                data-art-hue="jade"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Chiến dịch Hồ Chí Minh năm 1975</h3>
+                <p>
+                  Tư liệu về mệnh lệnh "thần tốc, táo bạo" và những ngày cuối
+                  cùng của cuộc kháng chiến chống Mỹ.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 8 — Ý NGHĨA / DI SẢN
+  ============================================================ -->
+      <section id="di-san" class="section legacy-section">
+        <div class="container">
+          <p class="section-label center">Ý nghĩa lịch sử</p>
+          <h2 class="section-title center">Võ Nguyên Giáp Để Lại Điều Gì?</h2>
+
+          <div class="legacy-grid">
+            <div class="legacy-text reveal-on-scroll">
+              <p>
+                Điều đặc biệt trong sự nghiệp Võ Nguyên Giáp là ông không xuất
+                thân từ một trường quân sự chính quy — ông là một thầy giáo dạy
+                Sử, học luật và tự học về nghệ thuật quân sự qua sách vở và thực
+                tiễn. Từ 34 chiến sĩ đầu tiên của Đội Việt Nam Tuyên truyền Giải
+                phóng quân năm 1944, ông đã góp phần xây dựng nên một quân đội
+                đánh bại hai cường quốc quân sự lớn trong thế kỷ XX.
+              </p>
+
+              <p>
+                Tại Điện Biên Phủ năm 1954, quyết định chuyển từ phương châm
+                "đánh nhanh, thắng nhanh" sang "đánh chắc, tiến chắc" — dù khiến
+                kế hoạch tác chiến phải lùi lại và chuẩn bị kỹ lưỡng hơn — được
+                xem là một trong những quyết định quân sự quan trọng nhất lịch
+                sử Việt Nam hiện đại, góp phần quyết định vào chiến thắng.
+              </p>
+
+              <p>
+                Trong cuộc kháng chiến chống Mỹ, ông tiếp tục là một trong những
+                người chỉ đạo chiến lược chủ chốt, từ cuộc Tổng tiến công và nổi
+                dậy Tết Mậu Thân năm 1968 đến Chiến dịch Hồ Chí Minh mùa xuân
+                năm 1975, kết thúc bằng mệnh lệnh nổi tiếng: "thần tốc, thần tốc
+                hơn nữa, táo bạo, táo bạo hơn nữa".
+              </p>
+
+              <p>
+                Giới quân sự và sử học quốc tế đánh giá Võ Nguyên Giáp là một
+                trong những nhà chỉ huy quân sự có ảnh hưởng lớn nhất thế kỷ XX,
+                đặc biệt trong lĩnh vực chiến tranh nhân dân và chiến tranh du
+                kích kết hợp với tác chiến quy mô lớn. Ông cũng được nhiều người
+                trong nước gọi bằng cái tên trìu mến "vị tướng của nhân dân" vì
+                sự gần gũi và quan tâm đến đời sống binh sĩ.
+              </p>
+
+              <p>
+                Sau chiến tranh, ông tiếp tục giữ các trọng trách trong Chính
+                phủ, đồng thời quan tâm đến các lĩnh vực khoa học, giáo dục và
+                bảo vệ môi trường. Ông qua đời ngày 4/10/2013 tại Hà Nội, thọ
+                102 tuổi — một trong những nhà lãnh đạo cách mạng sống thọ nhất
+                của thế kỷ XX, được an táng tại Vũng Chùa – Đảo Yến, quê nhà
+                Quảng Bình, theo nguyện vọng của ông.
+              </p>
+
+              <p>
+                Ngày nay, tên Võ Nguyên Giáp được đặt cho nhiều đường phố,
+                trường học trên khắp cả nước, và những trận đánh do ông chỉ huy
+                — đặc biệt là Điện Biên Phủ — vẫn được nghiên cứu và giảng dạy
+                tại nhiều học viện quân sự trên thế giới.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 9 — TRÍCH DẪN LỊCH SỬ
+  ============================================================ -->
+      <section class="quote-section" id="quote-section">
+        <div class="quote-bg"></div>
+        <div class="quote-overlay"></div>
+
+        <div class="quote-content" id="quote-content">
+          <!-- Nội dung trích dẫn được luân phiên hiển thị bởi JS, dữ liệu trong quotesData -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+      <button id="back-to-top" aria-label="Lên đầu trang">&uarr;</button>
+    </main>
+
+    <!-- ============================================================
+     FOOTER
+============================================================ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-logo">Võ Nguyên <span>Giáp</span></h3>
+          <p>
+            Không gian tư liệu số giới thiệu về Đại tướng Võ Nguyên Giáp — thân
+            thế, sự nghiệp, hành trình binh nghiệp, các chiến dịch và di sản ông
+            để lại cho lịch sử Việt Nam.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#gioi-thieu">Giới thiệu</a></li>
+            <li><a href="#timeline">Cuộc đời Võ Nguyên Giáp</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Nội dung</h4>
+          <ul>
+            <li><a href="#hanh-trinh">Hành trình binh nghiệp</a></li>
+            <li><a href="#su-kien">Các chiến dịch</a></li>
+            <li><a href="#thu-vien">Thư viện hình ảnh</a></li>
+            <li><a href="#video">Thước phim tài liệu</a></li>
+            <li><a href="#di-san">Di sản Võ Nguyên Giáp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year"></span> Võ Nguyên Giáp — Tư liệu lịch
+          sử. Trang web được xây dựng với mục đích giáo dục và học tập.
+        </p>
+        <p class="footer-quote">
+          "Thần tốc, thần tốc hơn nữa, táo bạo, táo bạo hơn nữa."
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="test7.js" defer></script>
+  </body>
+</html>
